@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="Quotes" customModuleProvider="target">
+            <connections>
+                <outlet property="textLabel" destination="G2I-Mm-5Gz" id="bkS-RO-ACt"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="FJg-dB-9uB">
+                    <rect key="frame" x="-17" y="33" width="264" height="264"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="264" id="5ug-Ch-lTN"/>
+                        <constraint firstAttribute="height" constant="264" id="DiD-C5-R74"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="template" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="k56-ND-DoS">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e95-Pp-ZLK">
+                    <rect key="frame" x="144" y="20" width="193" height="21"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k2p-iS-aUI">
+                            <rect key="frame" x="-6" y="-7" width="96" height="32"/>
+                            <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Qe-wf-iWe">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="generateAction:" target="-2" id="Hwp-PQ-hZK"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-ME-gJR">
+                            <rect key="frame" x="86" y="-7" width="113" height="32"/>
+                            <buttonCell key="cell" type="push" title="Quit Quotes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="00s-zt-rw7">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="quit:" target="-2" id="oti-cK-QAw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2I-Mm-5Gz">
+                    <rect key="frame" x="18" y="57" width="444" height="19"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="mSc-dR-rV7">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="e95-Pp-ZLK" secondAttribute="bottom" constant="20" id="0Wo-9E-QtO"/>
+                <constraint firstItem="e95-Pp-ZLK" firstAttribute="top" secondItem="G2I-Mm-5Gz" secondAttribute="bottom" constant="16" id="60R-0T-wYW"/>
+                <constraint firstItem="e95-Pp-ZLK" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="A5B-lU-gHK"/>
+                <constraint firstItem="G2I-Mm-5Gz" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="MmQ-0B-cXz"/>
+                <constraint firstItem="FJg-dB-9uB" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="-65" id="UgQ-Lb-heg"/>
+                <constraint firstItem="FJg-dB-9uB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="-17" id="sKu-ji-YO2"/>
+                <constraint firstAttribute="trailing" secondItem="G2I-Mm-5Gz" secondAttribute="trailing" constant="20" id="zAK-HZ-GVm"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="305"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="template" width="192" height="96"/>
+    </resources>
+</document>
