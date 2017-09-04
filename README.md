@@ -2,7 +2,7 @@
 
 Quotes is a simple macOS app with quotes generation.
 
-[![Platform](https://img.shields.io/badge/platform-masOS-green.svg)
+![Platform](https://img.shields.io/badge/platform-masOS-green.svg)
 [![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg)](https://swift.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
